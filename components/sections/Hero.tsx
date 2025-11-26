@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function Hero() {
 	return (
@@ -38,15 +39,16 @@ export function Hero() {
 					</p>
 
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
-						<Button size="lg" className="text-lg px-8 shadow-lg">
-							Prendre RDV en Ligne
+						<Button asChild size="lg" className="text-lg px-8 shadow-lg">
+							<Link href="/contact">Prendre RDV en Ligne</Link>
 						</Button>
 						<Button
+							asChild
 							variant="outline"
 							size="lg"
 							className="text-lg px-8 bg-white/50 hover:bg-white/80 backdrop-blur-sm"
 						>
-							Découvrir ma pratique
+							<Link href="/psychotherapie">Découvrir ma pratique</Link>
 						</Button>
 					</div>
 				</motion.div>

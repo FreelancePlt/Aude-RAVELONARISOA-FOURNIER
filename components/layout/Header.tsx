@@ -17,9 +17,9 @@ export function Header() {
 
 	const navItems = [
 		{ name: "Accueil", href: "/" },
-		{ name: "La Psychothérapie", href: "#" },
-		{ name: "Qui Je Suis", href: "#" },
-		{ name: "Contact", href: "#" },
+		{ name: "La Psychothérapie", href: "/psychotherapie" },
+		{ name: "Qui Je Suis", href: "/qui-je-suis" },
+		{ name: "Contact", href: "/contact" },
 	];
 
 	return (
@@ -40,7 +40,9 @@ export function Header() {
 							{item.name}
 						</Link>
 					))}
-					<Button>Prendre RDV en Ligne</Button>
+					<Button asChild>
+						<Link href="/contact">Prendre RDV en Ligne</Link>
+					</Button>
 				</nav>
 
 				{/* Mobile Nav */}
@@ -64,7 +66,9 @@ export function Header() {
 									{item.name}
 								</Link>
 							))}
-							<Button className="w-full mt-4">Prendre RDV en Ligne</Button>
+							<Button asChild className="w-full mt-4">
+								<Link href="/contact">Prendre RDV en Ligne</Link>
+							</Button>
 						</nav>
 					</SheetContent>
 				</Sheet>

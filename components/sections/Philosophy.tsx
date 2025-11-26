@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function Philosophy() {
 	return (
@@ -28,8 +29,8 @@ export function Philosophy() {
 							vous entrez en relation avec vous-même et avec les autres, afin de
 							dénouer les blocages et retrouver votre liberté d&apos;être.
 						</p>
-						<Button variant="outline" className="text-lg px-8">
-							En savoir plus sur mon approche
+						<Button asChild variant="outline" className="text-lg px-8">
+							<Link href="/psychotherapie">En savoir plus sur mon approche</Link>
 						</Button>
 					</motion.div>
 
